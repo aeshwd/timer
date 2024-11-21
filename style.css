@@ -1,0 +1,171 @@
+/* General Styling */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to right, #89f7fe, #66a6ff);
+    color: #333;
+    transition: background 0.5s ease, color 0.5s ease;
+  }
+  
+  .container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  /* Header */
+  header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    animation: fadeIn 2s ease;
+  }
+  
+  header p {
+    font-size: 1.2rem;
+    color: #555;
+  }
+  
+  /* Timer Settings */
+  .settings {
+    margin-top: 20px;
+    text-align: left;
+  }
+  
+  label {
+    font-weight: bold;
+    margin-right: 10px;
+  }
+  
+  input, select {
+    margin-bottom: 15px;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+  }
+  
+  button {
+    padding: 10px 20px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin: 5px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+  }
+  
+  button:hover {
+    transform: scale(1.1);
+    background-color: #45a049;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  /* Timer Display */
+  .timer-display {
+    position: relative;
+    margin: 40px auto;
+    width: 220px;
+    height: 220px;
+  }
+  
+  .progress-ring {
+    transform: rotate(-90deg);
+  }
+  
+  .progress-ring__circle {
+    stroke: #4caf50;
+    stroke-dasharray: 628.3185307179586; /* circumference */
+    stroke-dashoffset: 0;
+    transition: stroke-dashoffset 1s linear, stroke 0.5s ease;
+  }
+  
+  .time-display {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  
+  #time-display {
+    font-size: 2.5rem;
+    margin: 0;
+  }
+  
+  #session-status {
+    font-size: 1rem;
+    margin: 0;
+  }
+  
+  /* Motivational Popup */
+  #motivational-popup {
+    position: fixed;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    display: none;
+    animation: popupFadeIn 0.5s ease-in-out;
+  }
+  
+  @keyframes popupFadeIn {
+    from {
+      opacity: 0;
+      transform: translate(-50%, -60%);
+    }
+    to {
+      opacity: 1;
+      transform: translate(-50%, -50%);
+    }
+  }
+  
+  /* Themes */
+  body.theme1 {
+    background: linear-gradient(to right, #89f7fe, #66a6ff);
+  }
+  
+  body.theme2 {
+    background: linear-gradient(to right, #a8e063, #56ab2f);
+  }
+  
+  body.theme3 {
+    background: linear-gradient(to right, #9d50bb, #6e48aa);
+  }
+  
+  body.theme4 {
+    background: linear-gradient(to right, #f7971e, #ffd200);
+  }
+  
+  body.theme5 {
+    background: linear-gradient(to right, #ff9a9e, #fad0c4);
+  }
+  
+
+  .badge {
+    display: none;
+    padding: 10px;
+    background: gold;
+    border-radius: 10px;
+    font-size: 16px;
+    animation: glow 1.5s infinite alternate;
+}
+
+@keyframes glow {
+    0% {
+        box-shadow: 0 0 10px gold;
+    }
+    100% {
+        box-shadow: 0 0 20px gold;
+    }
+}

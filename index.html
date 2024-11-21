@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rizor Timer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>✨ Rizor Timer ✨</h1>
+      <p>Your personal productivity companion</p>
+    </header>
+
+   
+
+    <!-- Timer Settings -->
+    <section class="settings">
+      <h2>🛠️ Customize Timer</h2>
+      <div>
+        <label for="work-duration">Work Duration (min):</label>
+        <input type="number" id="work-duration" min="0" value="25">
+      </div>
+      <div>
+        <label for="break-duration">Short Break (min):</label>
+        <input type="number" id="break-duration" min="0" value="5">
+      </div>
+      <div>
+        <label for="long-break">Long Break (min):</label>
+        <input type="number" id="long-break" min="0" value="15">
+      </div>
+      <div>
+        <label for="cycles">Cycles:</label>
+        <input type="number" id="cycles" min="0" value="4">
+      </div>
+      <div>
+        <label for="alert-sound">🎵 Alert Sound:</label>
+        <select id="alert-sound">
+          <option value="alert1.mp3">Beep</option>
+          <option value="alert2.mp3">Police Siren</option>
+          <option value="alert3.mp3">Sound 1</option>
+          <option value="alert4.mp3">Sound 2</option>
+        </select>
+      </div>
+      <button id="start-timer">🚀 Start</button>
+      <button id="pause-timer" class="hidden">⏸️ Pause</button>
+      <button id="resume-timer" class="hidden">▶️ Resume</button>
+    </section>
+
+    <!-- Timer Display -->
+    <div class="timer-display">
+      <svg class="progress-ring" width="220" height="220">
+        <circle class="progress-ring__circle" stroke-width="10" fill="transparent" r="100" cx="110" cy="110" />
+      </svg>
+      <div class="time-display">
+        <h2 id="time-display">25:00</h2>
+        <p id="session-status">Get Ready!</p>
+      </div>
+    </div>
+
+    <!-- Motivational Popup -->
+    <div id="motivational-popup" class="hidden">
+      <p id="motivational-text"></p>
+    </div>
+  </div>
+
+
+  <div id="badges">
+    <div class="badge" id="badge-first-timer">🎖️ First Timer</div>
+    <div class="badge" id="badge-5-cycles">🏅 5 Cycles</div>
+    <div class="badge" id="badge-1-hour">🥇 1 Hour of Focus</div>
+</div>
+
+
+  <!-- Audio -->
+  <audio id="alert-sound-player"></audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
